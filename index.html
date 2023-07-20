@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+  <audio autoplay>
+    <source src="lambo-sound.mp3" type="audio/mpeg">
+  </audio>
+
+  <div id='logo' class="logo">
+    <img src="./images/logo.png" alt="">
+  </div>
+  
+  <div class="container" id="cont">
+    <div class="section" id="start">
+      <a href="#aventador"><button id="btn">EXPLORE</button></a>
+      <div id="div" class="div">
+        <h1 id="heading"></h1>
+      </div>
+      <img id="img" src="./images/aventador/pic.jpg" alt="">
+  </div>
+
+  <!-- cars -->
+  <div class="section" id="aventador">
+    <div class="title" style="background-image: url('./images/png/text.png')"></div>
+    <img src="./images/aventador/2.jpg" alt="">
+    <div class="colors">
+      <div class="dots active" id="orange" onclick="choose(id)"></div>
+      <div class="dots" id="blue" onclick="choose(id)"></div>
+      <div class="dots" id="red" onclick="choose(id)"></div>
+      <div class="dots" id="black" onclick="choose(id)"></div>
+      <div class="dots" id="cyan" onclick="choose(id)"></div>
+      <div class="dots" id="yellow" onclick="choose(id)"></div>
+      <div class="dots" id="gray" onclick="choose(id)"></div>
+    </div>
+  </div>
+  <div class="section" id="urus">
+    <div class="title2" style="background-image: url('./images/png/urus.png')"></div>
+    <img src="./images/urus/1.jpeg" alt="">
+    <div class="colors">
+      <div class="dots2 active" id="blue" onclick="choose2(id)"></div>
+      <div class="dots2" id="yellow" onclick="choose2(id)"></div>
+      <div class="dots2" id="orange" onclick="choose2(id)"></div>
+      <div class="dots2" id="white" onclick="choose2(id)"></div>
+      <div class="dots2" id="green" onclick="choose2(id)"></div>
+      <div class="dots2" id="black" onclick="choose2(id)"></div>
+      <div class="dots2" id="red" onclick="choose2(id)"></div>
+    </div>
+  </div>
+  <div class="section" id="huracan">
+    <div class="title3" style="background-image: url('./images/png/huracan.png')"></div>
+    <img src="./images/huracan/1.jpeg" alt="">
+    <div class="colors">
+      <div class="dots3 active" id="purple" onclick="choose3(id)"></div>
+      <div class="dots3" id="gray" onclick="choose3(id)"></div>
+      <div class="dots3" id="blue" onclick="choose3(id)"></div>
+      <div class="dots3" id="yellow" onclick="choose3(id)"></div>
+      <div class="dots3" id="black" onclick="choose3(id)"></div>
+      <div class="dots3" id="green" onclick="choose3(id)"></div>
+    </div>
+  </div>  
+</div>
+
+<div id="ct" class="colorTry"></div>
+<div id="ct2" class="colorTry"></div>
+
+<div class="fixedCont"></div>
+
+<div class="tags">
+  <a href="#start" class="car">Home Page</a>
+  <a class="car active" href="#aventador">Aventador</a>
+  <a class="car"  href="#urus">Urus</a>
+  <a class="car"  href="#huracan">Huracan</a>
+</div>
+
+</body>
+</html>
