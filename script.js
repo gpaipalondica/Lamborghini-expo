@@ -17,9 +17,9 @@ function checkVisibility() {
 
     // Do something with the visible element
     if (isVisible) {
-    console.log(element);
+    // console.log(element);
     let x = element.src.split('/')[4].split('.')[0]
-    console.log(x);
+    // console.log(x);
 
     let l = document.querySelectorAll('.car'),i;
     for(i=0; i<l.length; i++){
@@ -29,7 +29,7 @@ function checkVisibility() {
     if(x == 'aventador'){
       document.querySelectorAll('.car')[1].classList.add('active')
       let track = document.querySelector('#aventador .dots.active');
-      console.log(track);
+      // console.log(track);
       if(track.id == 'orange'){
         document.getElementById('ct').style.backgroundColor = 'rgb(239, 117, 31)'
         document.getElementById('ct2').style.backgroundColor = 'rgb(239, 117, 31)'
@@ -44,7 +44,7 @@ function checkVisibility() {
     else if(x == 'urus'){
       document.querySelectorAll('.car')[2].classList.add('active')
       let track = document.querySelector('#urus .dots2.active');
-      console.log(track);
+      // console.log(track);
       if(track.id == 'orange'){
         document.getElementById('ct').style.backgroundColor = 'rgb(239, 117, 31)'
         document.getElementById('ct2').style.backgroundColor = 'rgb(239, 117, 31)'
@@ -59,7 +59,7 @@ function checkVisibility() {
     else if(x == 'huracan'){
       document.querySelectorAll('.car')[3].classList.add('active')
       let track = document.querySelector('#huracan .dots3.active');
-      console.log(track);
+      // console.log(track);
       if(track.id == 'purple'){
         document.getElementById('ct').style.backgroundColor = '#8535BA'
         document.getElementById('ct2').style.backgroundColor = '#8535BA'
@@ -127,7 +127,7 @@ setTimeout(() => {
 
 function choose(id){
   let c = id
-  console.log("chosen", c);
+  // console.log("chosen", c);
 
   let all = document.querySelectorAll('.dots'),a;
 
@@ -139,7 +139,7 @@ function choose(id){
   for(i=0; i<b.length;i++)
   {
     if(b[i].id==c){
-      console.log("Found");
+      // console.log("Found");
       b[i].classList.add('active')
     }
   }
@@ -180,7 +180,7 @@ function choose(id){
 
 function choose2(id2){
   let c2 = id2
-  console.log("chosen", c2);
+  // console.log("chosen", c2);
 
   let all2 = document.querySelectorAll('.dots2'),a;
 
@@ -192,7 +192,7 @@ function choose2(id2){
   for(i=0; i<b.length;i++)
   {
     if(b[i].id==c2){
-      console.log("Found");
+      // console.log("Found");
       b[i].classList.add('active')
     }
   }
@@ -232,7 +232,7 @@ function choose2(id2){
 }
 function choose3(id3){
   let c3 = id3
-  console.log("chosen", c3);
+  // console.log("chosen", c3);
 
   let all3 = document.querySelectorAll('.dots3'),a;
 
@@ -244,7 +244,7 @@ function choose3(id3){
   for(i=0; i<b.length;i++)
   {
     if(b[i].id==c3){
-      console.log("Found");
+      // console.log("Found");
       b[i].classList.add('active')
     }
   }

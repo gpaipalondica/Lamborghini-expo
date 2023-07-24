@@ -3,17 +3,16 @@
     src: url("./font/La\ Macchina\ Regular.ttf") format("truetype");
   }
 
-  :root {
-    --neworange: rgb(239, 117, 31);
-  }
-
-*{
+  *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
-}
+  }
 
+  :root {
+    --neworange: rgb(239, 117, 31);
+  }
 
 .container{
     height: 100vh;
@@ -28,7 +27,6 @@
     width: 61px;
     height: 100vh;
     z-index: 15;
-    /* overflow-y: scroll; */
     pointer-events: none;
 }
 
@@ -62,6 +60,8 @@
     scroll-snap-align: start;
     scroll-snap-stop: always;
     position: relative;
+    width: 100%;
+    overflow: hidden;
 }
 
 .section:nth-child(n+2){
@@ -81,7 +81,7 @@
      top: 0;
      left: 0;
      z-index: 9;
-     /* margin-top: -50px; */
+
 }
 
 .div{
@@ -90,12 +90,9 @@
     left: 50%;
     z-index: 13;
     transform: translate(-50%,-50%) ;
-    /* background-color: red; */
     width: 80%;
     transition: .5s ease;
 }
-
-
 
 
 #heading{
@@ -105,11 +102,10 @@
     color: lightgrey;
     font-size: 200px;
     text-align: start;
-    /* transition: .5s ease; */
 }
 
 .section:nth-child(2) img{
-    width: 1000px;
+    width: 1020px;
     position: relative;
     top: 40px;
     left: 50px;
@@ -138,11 +134,13 @@
     left: 40px;
     z-index: 8;
     pointer-events: none;
+    transition: .5s ease;
 }
 
 .logo img:nth-child(1){
     width: 130px;
     height: 130px;
+    transition: .5s ease;
 }
 
 .logo img:nth-child(2)
@@ -180,7 +178,6 @@
     position: absolute;
     bottom: 70px;
     left: 150px;
-    /* background-color: pink; */
     display: flex;
     justify-content: center;
 }
@@ -248,12 +245,13 @@
     z-index: 12;
     background-size:contain;
     background-repeat: no-repeat;
+    transition: .5s ease;
+
 }
 
 .title{
     width: 420px;
     height: 100px;
-    /* position: fixed; */
 }
 .title2{
     width: 400px;
@@ -271,12 +269,9 @@
 
 .tags{
     position: fixed;
-    /* background-color: pink; */
     z-index: 8;
     left: 0;
     top: 50%;
-    /* width: 250px; */
-    /* height: 400px; */
     display: flex;
     flex-direction: column;
     text-align: start;
@@ -289,11 +284,11 @@
     color: gray;
     transform: scaleX(1.2);
     transition: .5s ease;
+    cursor: pointer;
 }
 
 .car:nth-child(1){
     font-size: 12px;
-    /* text-align: center; */
 }
 
 .tags a:nth-child(-n+3){
@@ -308,4 +303,147 @@
     transition: .5s ease;
     font-weight: bold;
     color: black;
+}
+
+
+@media (max-width:1024px) {
+    #ct{
+        display: none;
+    }
+
+    #ct2{
+        clip-path: none;
+        background-color:var(--neworange);
+        width: 100%;
+        height: 200px;
+    }
+
+    .section:nth-child(2){
+        width: 100%;
+    }
+
+    .section:nth-child(2) img {
+        width: 105%;
+        left: 0;
+    }
+
+    .section:nth-child(3) img {
+        width: 105%;
+    }
+
+    .section:nth-child(4) img {
+        width: 105%;
+        left: 0;
+    }
+
+    .colors{
+        width: 100%;
+        left: 0;
+        bottom: 135px;
+    }
+
+    .tags{
+        align-items: center;
+        flex-direction: row;
+        left: 50%;
+        width: 75%;
+        top: 92%;
+        justify-content: space-between;
+        transform: translate(-50%, -50%);
+    }
+
+    .tags a:nth-child(-n+3){
+        border-bottom:none;
+    }
+    .car{
+        margin-left: 0;
+    }
+}
+
+@media (max-width:775px) {
+    #start{
+        background-color:black; width:100%; height:100%; z-index:9;
+    }
+
+    #img{
+        content: url('./images/bull.png');
+        width: 500px;
+        height:auto; 
+        position:absolute; 
+        left:50%; 
+        top:50%; 
+        transform: translate(-50%,-50%);
+    }
+
+    #btn{
+        top:80%
+    }
+}
+
+@media (max-width:650px) {
+    .title{
+        width: 60%;
+        margin-top: 6px;
+    }
+
+    .logo img{
+        scale: 80%;
+    }
+
+    .title2{
+        left: 175px;
+    }
+
+    .title3{
+        width: 270px;
+        margin-top: 22px;
+        left: 155px;
+    }
+}
+
+
+@media (max-width: 500px) {
+    .logo{
+        left: 23px;
+    }
+
+    /* #start{
+        margin-top: -40px;
+    } */
+
+    #btn{
+        top: 78%;
+    }
+
+    .title{
+        left: 137px;
+    }   
+
+    .title2{
+        width: 170px;
+        margin-top: 22px;
+        left: 155px;
+    }
+
+    .title3{
+        width: 270px;
+        margin-top: 22px;
+        left: 125px;
+    }
+
+    .car{
+        font-size: 12px;
+    }
+
+    .section:nth-child(n+2) img {
+     top: 0;
+    }
+
+    .colors{
+        bottom:200px
+    }
+
+    .tags{
+        top: 90%;
+    }
 }
